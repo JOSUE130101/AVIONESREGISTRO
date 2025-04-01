@@ -50,7 +50,13 @@ Modelo interactúa con MySQL
 
 Vista renderiza el resultado
 
-💻 Instalación de XAMPP
+
+```
+## 💻 Instalación de XAMPP
+
+Aplicación web para gestión aeronáutica con:
+```
+
 Requisitos Mínimos
 bash
 Copy
@@ -76,7 +82,12 @@ bash
 Copy
 ▶ Iniciar módulo Apache
 ▶ Iniciar módulo MySQL
-🗃️ Configuración de Base de Datos
+
+
+```
+## 🗃️ Configuración de Base de Datos
+```
+
 1. Crear Base de Datos
 Método 1 - phpMyAdmin:
 
@@ -116,9 +127,13 @@ private $host = "127.0.0.1";
 private $usuario = "root";
 private $clave = ""; 
 private $db = "anagar";
-📂 Estructura del Proyecto
-bash
-Copy
+
+
+```
+## 📂 Estructura del Proyecto
+
+```
+
 Crud/
 ├── .htaccess           # Configuración global
 ├── app/
@@ -134,15 +149,18 @@ Crud/
 │   └── libs/           # Bibliotecas core
 └── public/
     └── index.php       # Punto de entrada
+
+```
 🔗 Funcionamiento de URLs
+```
 Transformación de Rutas
 bash
-Copy
+
 Original: http://localhost/Crud/aviones/editar/5
 Transformada: http://localhost/Crud/public/index.php?url=aviones/editar/5
 Configuración .htaccess
 apache
-Copy
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /Crud/public
@@ -150,7 +168,14 @@ Copy
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
 </IfModule>
-🛠️ Operaciones CRUD
+
+
+```
+🔗🛠️ Operaciones CRUD
+
+```
+
+
 Acción	URL Ejemplo	Método HTTP
 Listar	/aviones	GET
 Crear	/aviones/alta	POST
@@ -163,44 +188,18 @@ Interfaz de Usuario:
 🗑️ Eliminar: Icono de basura (con confirmación)
 
 ➕ Nuevo: Botón "Agregar Avión"
-
+```
 🚨 Solución de Problemas
+```
+
+
 Error	Solución	Referencia
 403 Forbidden	Verificar permisos en .htaccess	Apache Permisos
 Conexión BD fallida	Revisar credenciales en MySQLdb.php	MySQLi Docs
 URLs no funcionan	Habilitar módulo mod_rewrite	Guía XAMPP
+
+
+```
+
 👨💻 Sobre el Desarrollador
-Ing. [Tu Nombre]
-Ingeniero en Sistemas Computacionales especializado en desarrollo web full-stack.
-
-Stack Tecnológico Favorito:
-
-javascript
-Copy
-const techStack = {
-    frontend: ["React", "Vue.js", "Tailwind CSS"],
-    backend: ["Laravel", "Node.js", "Python"],
-    databases: ["MySQL", "PostgreSQL", "MongoDB"]
-};
-Proyectos Destacados:
-
-🛫 Sistema de gestión de flotas aéreas
-
-✈️ Plataforma de reservas de vuelos
-
-🚀 Dashboard de mantenimiento aeronáutico
-
-Contacto:
-LinkedIn
-GitHub
-
-📚 Referencias Técnicas
-Documentación Oficial PHP
-
-MySQLi Prepared Statements
-
-Configuración Apache para MVC
-
-XAMPP Troubleshooting Guide
-
-⬆️ Volver al inicio
+```
