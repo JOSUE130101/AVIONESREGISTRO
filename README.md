@@ -1,141 +1,174 @@
-# 🛩️ CRUD de Aviones con Arquitectura MVC
+# ✈️ CRUD de Gestión Aeronáutica
 
-[![PHP](https://img.shields.io/badge/PHP-8.2+-%23777BB4?logo=php)](https://www.php.net/)
-[![MySQL](https://img.shields.io/badge/MySQL-8.0+-%234479A1?logo=mysql)](https://www.mysql.com/)
-[![MVC](https://img.shields.io/badge/Pattern-MVC-%2300C7B7)](https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador)
+[![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?logo=php)](https://php.net)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0%2B-4479A1?logo=mysql)](https://mysql.com)
+[![MVC](https://img.shields.io/badge/Architecture-MVC-00C7B7)](https://es.wikipedia.org/wiki/Modelo–vista–controlador)
 
-Sistema web para gestión de registros aeronáuticos con operaciones CRUD completas implementando arquitectura MVC.
+Sistema web para administrar registros de aviones con operaciones CRUD completas, desarrollado bajo arquitectura MVC.
 
-## 📚 Tabla de Contenidos
-1. [Descripción](#-descripción)
-2. [Requisitos](#-requisitos)
-3. [Instalación](#-instalación)
-4. [Estructura del Proyecto](#-estructura-del-proyecto)
-5. [Configuración](#-configuración)
-6. [Operaciones CRUD](#-operaciones-crud)
-7. [Solución de Problemas](#-solución-de-problemas)
-8. [Glosario](#-glosario)
+## 📑 Tabla de Contenidos
+1. [Características](#-características)
+2. [Requisitos Técnicos](#-requisitos-técnicos)
+3. [Instalación de XAMPP](#-instalación-de-xampp)
+4. [Configuración de Base de Datos](#-configuración-de-base-de-datos)
+5. [Estructura del Proyecto](#-estructura-del-proyecto)
+6. [Uso del Sistema](#-uso-del-sistema)
+7. [Tecnologías Implementadas](#-tecnologías-implementadas)
+8. [Sobre el Desarrollador](#-sobre-el-desarrollador)
 9. [Referencias Técnicas](#-referencias-técnicas)
-10. [Sobre el Autor](#-sobre-el-autor)
 
-## 🌟 Descripción
-Sistema completo para administrar una flota aérea con:
-- 10 registros iniciales de aviones realistas
-- Interfaz intuitiva con capacidades de filtrado
-- Persistencia en base de datos MySQL
-- URLs semánticas protegidas
+## 🚀 Características
+- Registro de aviones comerciales y privados
+- Interfaz responsive con Bootstrap
+- Validación de datos en frontend y backend
+- Sistema de confirmación para eliminaciones
+- 10 registros iniciales con datos realistas
 
-**Ejemplo de datos:**
+**Datos de ejemplo:**
 ```sql
-('Boeing', '747-8', 'Lufthansa'),
-('Airbus', 'A320neo', 'American Airlines'),
-('Cessna', '172 Skyhawk', 'John Smith (Privado)')
-🖥️ Requisitos
-XAMPP 8.2+ (Apache + MySQL + PHP)
+('Airbus', 'A380', 'Emirates'),
+('Boeing', '787 Dreamliner', 'Qatar Airways'),
+('Cessna', 'Citation X', 'Jeff Bezos (Privado)')
+💻 Requisitos Técnicos
+Windows 10/11 (64-bit) o Linux
 
-Navegador moderno (Chrome 90+, Firefox 88+)
+XAMPP 8.2+ (Descargar)
 
-500 MB de espacio en disco
+1 GB RAM mínimo
 
-⚙️ Instalación
-Clonar repositorio
+Navegador moderno (Chrome, Firefox, Edge)
 
-bash
-Copy
-git clone https://github.com/tu-usuario/Crud-Aviones-MVC.git
-mv Crud-Aviones-MVC /xampp/htdocs/Crud
-Importar base de datos
+📥 Instalación de XAMPP
+Descargar instalador desde Apache Friends
+
+Ejecutar con permisos de administrador:
 
 bash
 Copy
-mysql -u root anagar < database/aviones.sql
-Iniciar servicios XAMPP
+xampp-windows-x64-8.2.12-0-VS16-installer.exe
+Seleccionar componentes esenciales:
+
+Copy
+☑ Apache
+☑ MySQL
+☑ PHP
+☑ phpMyAdmin
+Instalar en directorio predeterminado (C:\xampp)
+
+Iniciar servicios:
 
 bash
 Copy
-# En el panel de control de XAMPP:
-▶ Iniciar Apache
-▶ Iniciar MySQL
-📂 Estructura del Proyecto
+# Panel de Control XAMPP
+▶ Iniciar módulo Apache
+▶ Iniciar módulo MySQL
+🗃️ Configuración de Base de Datos
+Crear base de datos:
+
+sql
+Copy
+CREATE DATABASE flota_aerea 
+CHARACTER SET utf8mb4 
+COLLATE utf8mb4_spanish_ci;
+Importar estructura y datos iniciales:
+
 bash
 Copy
-Crud/
-├── app/
-│   ├── controladores/    # Lógica de negocios
-│   ├── modelos/          # Capa de datos SQL
-│   ├── vistas/           # Interfaz de usuario
-│   └── libs/             # Bibliotecas core
-└── public/               # Punto de entrada público
-🔧 Configuración
-Archivo de conexión MySQL: app/libs/MySQLdb.php
+mysql -u root flota_aerea < database/aviones.sql
+Configurar conexión en config/database.php:
 
 php
 Copy
-private $host = "127.0.0.1";
-private $usuario = "root";
-private $clave = ""; 
-private $db = "anagar";
-Reglas de reescritura: public/.htaccess
-
-apache
+<?php
+define('DB_HOST', '127.0.0.1');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'flota_aerea');
+📂 Estructura del Proyecto
+bash
 Copy
-RewriteEngine On
-RewriteBase /Crud/public
-RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
-🛠️ Operaciones CRUD
-Operación	URL Ejemplo	Método HTTP
+aviones-crud/
+├── app/
+│   ├── controllers/      # Lógica de operaciones
+│   ├── models/           # Consultas SQL
+│   ├── views/            # Interfaces de usuario
+│   └── core/             # Bibliotecas base
+├── public/
+│   ├── assets/           # CSS/JS/Imágenes
+│   └── index.php         # Punto de entrada
+└── database/
+    └── aviones.sql       # Esquema inicial
+🕹️ Uso del Sistema
+Operación	URL	Método HTTP
 Listar	/aviones	GET
-Crear	/aviones/alta	POST
+Crear	/aviones/crear	POST
 Editar	/aviones/editar/5	PUT
-Eliminar	/aviones/borrar/3	DELETE
-Interfaz CRUD <!-- Agregar imagen real si existe -->
+Eliminar	/aviones/eliminar/3	DELETE
+Acceso inicial:
 
-🚨 Solución de Problemas
-Error	Solución	Referencia
-Error 403	Verificar permisos en .htaccess	Apache Permisos
-Conexión fallida	Validar credenciales en MySQLdb.php	MySQLi Docs
-URLs no funcionan	Habilitar mod_rewrite	Guía XAMPP
-📖 Glosario
-MVC: Patrón arquitectónico separado en Modelo, Vista y Controlador (Wikipedia)
+Copy
+http://localhost/aviones-crud/public/
+🛠️ Tecnologías Implementadas
+Frontend:
+Bootstrap
+jQuery
 
-CRUD: Conjunto de operaciones básicas para persistencia de datos
+Backend:
+PHP
+MySQLi
 
-mod_rewrite: Módulo de Apache para URLs semánticas
+Herramientas:
+XAMPP
+Git
 
-📚 Referencias Técnicas
-Documentación PHP
-
-MySQLi para PHP
-
-Apache mod_rewrite
-
-XAMPP Oficial
-
-👨💻 Sobre el Autor
+👨💻 Sobre el Desarrollador
 Ing. [Tu Nombre]
-Ingeniero en Sistemas Computacionales con especialización en desarrollo web full-stack.
+Ingeniero en Sistemas Computacionales especializado en desarrollo web full-stack.
 
-🚀 5 años desarrollando aplicaciones empresariales
+🎯 Habilidades Técnicas
+Arquitecturas MVC y Microservicios
 
-💡 Pasión por arquitecturas limpias y patrones de diseño
+Desarrollo de APIs RESTful
 
-🌍 Proyectos destacados en sistemas de gestión aeronáutica
+Sistemas de autenticación JWT
 
-📫 Contacto: tu@email.com | LinkedIn
+Optimización de bases de datos relacionales
+
+💡 Proyectos Destacados
+Sistema de reservas para aerolínea (PHP/Laravel)
+
+Plataforma de tracking de vuelos en tiempo real (Node.js/Socket.io)
+
+Aplicación móvil para gestión de mantenimiento aeronáutico (React Native)
+
+🌐 Tecnologías Favoritas
+python
+Copy
+tecnologias = {
+    "frontend": ["React", "Vue.js", "Tailwind CSS"],
+    "backend": ["Laravel", "Django", "Node.js"],
+    "databases": ["MySQL", "PostgreSQL", "MongoDB"],
+    "devops": ["Docker", "AWS", "Jenkins"]
+}
+📫 Conéctate Conmigo
+LinkedIn
+GitHub
+Portafolio
 
 diff
 Copy
-+ "La perfección se alcanza no cuando no hay nada más que añadir, sino cuando no hay nada más que quitar." 
-+ - Antoine de Saint-Exupéry (Autor de "El Principito" y pionero de la aviación)
++ "La innovación distingue a los líderes de los seguidores." 
++ - Steve Jobs
+📚 Referencias Técnicas
+Documentación Oficial PHP
+
+MySQLi Prepared Statements
+
+Configuración Apache para MVC
+
+Buenas Prácticas CRUD
+
+XAMPP Troubleshooting Guide
+
 ⬆️ Volver al inicio
 
-Copy
-
-Este README.md incluye:
-- Formato profesional con badges y emojis
-- Sección ampliada del autor con elementos visuales
-- Enlaces internos para navegación
-- Sintaxis de código mejorada
-- Tablas interactivas
-- Citas inspiradoras relacionadas con aviación
-- Referencias técnicas verificables
