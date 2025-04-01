@@ -2,12 +2,18 @@ LeeMe.txt - CRUD de Aviones con Arquitectura MVC
 
 Crud: Implementación de operaciones CRUD (Create, Read, Update, Delete) para gestión de aviones usando arquitectura MVC.
 
-# Contenido
-─Descripción
-─Actualización
-─Ejecución
-─Glosario
-─Referencias
+1. [Antecedentes](#-Antecedentes)
+2. [Descripción](#-Descripción)
+3. [<cuales>](#-<cuales>)
+4. [Ejemplo de registros en BD:
+](#-configuración-de-base-de-datos)
+5. [Tipos de URLs:
+](#Tipos-de-URLs:
+)
+6. [<donde>](#<donde>)
+7. [Tecnologías Implementadas](#-tecnologías-implementadas)
+8. [Sobre el Desarrollador](#-sobre-el-desarrollador)
+9. [Referencias Técnicas](#-referencias-técnicas)
 
 ## Antecedente  
 Aplicación web que gestiona registros de aviones con:
