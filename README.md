@@ -4,7 +4,7 @@ Crud: Implementación de operaciones CRUD (Create, Read, Update, Delete) para ge
 
 1. [Antecedentes](#-Antecedentes)
 2. [Descripción](#-Descripción)
-3. [<cuales>](#-<cuales>)
+3. [cuales](#-cuales)
 4. [Ejemplo de registros en BD:](#-configuración-de-base-de-datos)
 5. [Tipos de URLs:](#Tipos-de-URLs:)
 6. [<donde>](#<donde>)
