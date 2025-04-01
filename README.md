@@ -203,3 +203,37 @@ URLs no funcionan	Habilitar módulo mod_rewrite	Guía XAMPP
 
 ##👨💻 Sobre el Desarrollador
 ```
+## 👨💻 Sobre el Desarrollador  
+**Israel Harder**  
+*Programador Full-Stack especializado en diseño web*
+
+### 💻 Habilidades Aplicadas en este Proyecto  
+```javascript
+const skills = {
+    frontend: ["CSS3", "HTML5", "Responsive Design"],
+    backend: ["PHP", "MySQL", "Arquitectura MVC"],
+    herramientas: ["XAMPP", "phpMyAdmin", "Git"],
+    metodologías: ["Clean Code", "POO", "Rutas RESTful"]
+};
+🛠️ Experiencia Demostrada
+Implementación profesional de MVC:
+
+Modelos: Consultas SQL preparadas
+
+Vistas: Interfaz intuitiva con CSS personalizado
+
+Controladores: Lógica de negocio eficiente
+
+Diseño de base de datos relacional optimizada
+
+Desarrollo de sistema CRUD completo con seguridad integrada
+
+📬 Contáctame
+Email
+Colaboraciones y propuestas profesionales:
+✉️ israelharder@gmail.com
+
+diff
+Copy
++ "El arte de programar consiste en transformar problemas complejos en soluciones elegantes"
++ - Mi filosofía de desarrollo
