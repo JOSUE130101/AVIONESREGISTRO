@@ -197,7 +197,23 @@ Error	Solución	Referencia
 403 Forbidden	Verificar permisos en .htaccess	Apache Permisos
 Conexión BD fallida	Revisar credenciales en MySQLdb.php	MySQLi Docs
 URLs no funcionan	Habilitar módulo mod_rewrite	Guía XAMPP
+```
+## 📚 Referencias Técnicas
+```
+1. **[PHP: The Right Way](https://phptherightway.com/)**  
+   Guía de mejores prácticas para desarrollo PHP moderno
 
+2. **[OWASP Top 10](https://owasp.org/www-project-top-ten/)**  
+   Estándar de seguridad para aplicaciones web
+
+3. **[Bootstrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)**  
+   Framework CSS utilizado en el diseño frontend
+
+4. [Documentación Oficial PHP](https://www.php.net/manual/es/)
+5. [MySQLi Prepared Statements](https://www.php.net/manual/es/mysqli.quickstart.prepared-statements.php)
+6. [Configuración Apache para MVC](https://httpd.apache.org/docs/trunk/es/howto/mvc.html)
+
+[⬆️ Volver al inicio](#-sistema-crud-de-gestión-de-aviones-con-mvc)
 
 ```
 
