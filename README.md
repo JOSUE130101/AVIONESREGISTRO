@@ -208,13 +208,7 @@ URLs no funcionan	Habilitar módulo mod_rewrite	Guía XAMPP
 *Programador Full-Stack especializado en diseño web*
 
 ### 💻 Habilidades Aplicadas en este Proyecto  
-```javascript
-const skills = {
-    frontend: ["CSS3", "HTML5", "Responsive Design"],
-    backend: ["PHP", "MySQL", "Arquitectura MVC"],
-    herramientas: ["XAMPP", "phpMyAdmin", "Git"],
-    metodologías: ["Clean Code", "POO", "Rutas RESTful"]
-};
+
 🛠️ Experiencia Demostrada
 Implementación profesional de MVC:
 
