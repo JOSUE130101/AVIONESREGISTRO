@@ -151,7 +151,7 @@ Crud/
     └── index.php       # Punto de entrada
 
 ```
-🔗 Funcionamiento de URLs
+##🔗 Funcionamiento de URLs
 ```
 Transformación de Rutas
 bash
@@ -171,7 +171,7 @@ apache
 
 
 ```
-🔗🛠️ Operaciones CRUD
+##🛠️ Operaciones CRUD
 
 ```
 
@@ -189,7 +189,7 @@ Interfaz de Usuario:
 
 ➕ Nuevo: Botón "Agregar Avión"
 ```
-🚨 Solución de Problemas
+##🚨 Solución de Problemas
 ```
 
 
@@ -201,5 +201,5 @@ URLs no funcionan	Habilitar módulo mod_rewrite	Guía XAMPP
 
 ```
 
-👨💻 Sobre el Desarrollador
+##👨💻 Sobre el Desarrollador
 ```
